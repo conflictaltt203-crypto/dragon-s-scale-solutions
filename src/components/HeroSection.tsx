@@ -47,24 +47,14 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <motion.div className="relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 0.7, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.3 }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[600px] md:w-[650px] md:h-[750px] pointer-events-none select-none"
-            >
-              <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain" />
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-5xl md:text-7xl font-bold leading-tight relative z-10"
-            >
-              Victor Manzano
-            </motion.h1>
-          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="text-5xl md:text-7xl font-bold leading-tight"
+          >
+            Victor Manzano
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, x: -40 }}
@@ -102,52 +92,20 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Right side - Terminal */}
+        {/* Right side - Dragon */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: 40 }}
+          initial={{ opacity: 0, scale: 0.8, x: 40 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="terminal-bg rounded-xl border border-border/50 glow-border overflow-hidden"
+          transition={{ duration: 1, delay: 0.4 }}
+          className="flex items-center justify-center"
         >
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-border/30">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
-            <span className="ml-4 text-xs font-mono text-muted-foreground">terminal — victor — 80x24</span>
-          </div>
-          <div className="p-6 font-mono text-sm space-y-4">
-            <div>
-              <span className="text-green-400">➜ </span>
-              <span className="text-glow-cyan">~</span>
-              <span className="text-foreground">whoami</span>
-            </div>
-            <div className="text-muted-foreground ml-4">Victor Manzano</div>
-            
-            <div>
-              <span className="text-green-400">➜ </span>
-              <span className="text-glow-cyan">~</span>
-              <span className="text-foreground">role</span>
-            </div>
-            <div className="text-muted-foreground ml-4">Head de Vendas @ AxionEnterprise | Dev Fullstack</div>
-
-            <div>
-              <span className="text-green-400">➜ </span>
-              <span className="text-glow-cyan">~</span>
-              <span className="text-foreground">stack --list</span>
-            </div>
-            <div className="text-muted-foreground ml-4">React, Node, Python, Windsurf, OpenClaw, Gemini, Cloud</div>
-
-            <div>
-              <span className="text-green-400">➜ </span>
-              <span className="text-glow-cyan">~</span>
-              <span className="text-foreground">status</span>
-            </div>
-            <div className="ml-4">
-              <span className="text-green-400 font-bold">READY </span>
-              <span className="text-muted-foreground">Vendas + Código = Crescimento acelerado.</span>
-            </div>
-            <div className="text-foreground">_</div>
-          </div>
+          <img
+            src={dragonHero}
+            alt="Dragon"
+            width={1024}
+            height={1024}
+            className="w-full max-w-[600px] h-auto drop-shadow-[0_0_80px_hsl(270,80%,50%)]"
+          />
         </motion.div>
       </div>
 
