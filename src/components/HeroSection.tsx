@@ -33,15 +33,6 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-      {/* Dragon background */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.18, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.3 }}
-        className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] lg:w-[900px] lg:h-[900px] pointer-events-none select-none"
-      >
-        <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain drop-shadow-[0_0_80px_hsl(270,80%,60%)]" />
-      </motion.div>
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-8 items-center pt-20 relative z-10">
         {/* Left side */}
         <div className="flex flex-col gap-6">
@@ -56,14 +47,24 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-5xl md:text-7xl font-bold leading-tight"
-          >
-            Victor Manzano
-          </motion.h1>
+          <motion.div className="relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 0.25, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[550px] md:h-[550px] pointer-events-none select-none"
+            >
+              <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain drop-shadow-[0_0_60px_hsl(270,80%,60%)]" />
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-5xl md:text-7xl font-bold leading-tight relative z-10"
+            >
+              Victor Manzano
+            </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, x: -40 }}
