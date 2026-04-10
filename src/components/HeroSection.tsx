@@ -47,14 +47,24 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-5xl md:text-7xl font-bold leading-tight"
-          >
-            Victor Manzano
-          </motion.h1>
+          <motion.div className="relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 0.25, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[550px] md:h-[550px] pointer-events-none select-none"
+            >
+              <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain drop-shadow-[0_0_60px_hsl(270,80%,60%)]" />
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-5xl md:text-7xl font-bold leading-tight relative z-10"
+            >
+              Victor Manzano
+            </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, x: -40 }}
