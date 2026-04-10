@@ -50,11 +50,11 @@ const HeroSection = () => {
           <motion.div className="relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 0.25, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.3 }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[550px] md:h-[550px] pointer-events-none select-none"
+              animate={{ opacity: 0.7, scale: 1 }}
+              transition={{ duration: 1.5, delay: 0.3 }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[600px] md:w-[650px] md:h-[750px] pointer-events-none select-none"
             >
-              <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain drop-shadow-[0_0_60px_hsl(270,80%,60%)]" />
+              <img src={dragonHero} alt="" width={1024} height={1024} className="w-full h-full object-contain" />
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
