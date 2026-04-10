@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import dragonHero from "@/assets/dragon-hero.png";
 
 const roles = ["Head de Vendas", "Dev Fullstack", "Sales Engineer"];
 
